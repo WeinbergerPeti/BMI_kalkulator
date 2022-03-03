@@ -52,7 +52,29 @@ public class BmiKalkulator
 
     private static void ertekeles(int tomeg, int magassag, double bmiIndex) 
     {
-        String testalkat="túlsúlyos";
+        
+        //String testalkat = "túlsúlyos";
+        String testalkat = "";
+        if (bmiIndex<=20.0) 
+        {
+            testalkat="Nagyon sovány";
+        }
+        else if (bmiIndex<=25.0) 
+        {
+            testalkat="normál";
+        }
+        else if (bmiIndex<=30.0) 
+        {
+            testalkat="túlsúlyos";
+        }
+        else if (bmiIndex<=35.0) 
+        {
+            testalkat="elhízott";
+        }
+        else
+        {
+            testalkat="kórosan elhízott";
+        }
         System.out.printf("Ön %d cm magas és %d kg tömegű,"
                 + "így BMI indexe %.1f,"
                 + "Tehát Ön %s testalkatú.\n",tomeg, magassag, bmiIndex, testalkat);
